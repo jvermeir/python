@@ -62,4 +62,8 @@ vraag:
 resultaat:
 '''
 het_grootste_verschil = 4
+'''
+bonusvraag:
+    wat gebeurt er als de ene lijst langer is dan de andere?
+'''
 

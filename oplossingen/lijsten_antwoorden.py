@@ -28,7 +28,7 @@ print("lengte langste woord: ", len(langste_woord))
 #
 # kortere versie:
 #
-grootste_lengte = max(map(lambda x: len(x), woorden))
+grootste_lengte = max(map(lambda woord: len(woord), woorden))
 langste_woord = next(filter(lambda woord: len(woord) == grootste_lengte, woorden))
 print ("langste woord: ", langste_woord)
 print ("lengte langste woord: ", len(langste_woord))
@@ -70,3 +70,14 @@ for i in range(0, len(hoogste_cijfer)):
 print ("het grootste verschil tussen het hoogste en laagste cijfer is "
        , grootste_verschil, ". Dat is bij cijferpaar ("
        ,hoogste_cijfer[index_grootste_verschil], ",", laagste_cijfer[index_grootste_verschil], ").")
+
+#
+# kortere versie
+#
+paren = set(zip(hoogste_cijfer, laagste_cijfer))
+grootste_verschil =  max(map(lambda paar: paar[0]-paar[1], paren))
+paar_met_grootste_verschil = next(filter(lambda paar: paar[0]-paar[1]==grootste_verschil, paren))
+
+print ("het grootste verschil tussen het hoogste en laagste cijfer is "
+       , grootste_verschil, ". Dat is bij cijferpaar ("
+       ,paar_met_grootste_verschil[0], ",", paar_met_grootste_verschil[1], ").")
