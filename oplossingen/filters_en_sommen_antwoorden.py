@@ -97,3 +97,24 @@ print(antwoord)
 
 # korte versie
 print({x: x*x for x in lijst})
+
+'''
+7. Maak een dict van een lijst, de key is het element van de lijst, de value is het kwadraat van de key.
+In het antwoord mogen alleen veelvouden van 4 voorkomen
+'''
+print()
+print('7.')
+
+lijst = [1, 2, 3, 4]
+
+antwoord = {}
+
+for x in lijst:
+    kwadraad = x*x
+    if kwadraad % 4 == 0:
+        antwoord[x] = kwadraad
+
+print(antwoord)
+
+# korte versie
+print({x: x*x for x in lijst if x*x % 4 == 0})

@@ -59,3 +59,14 @@ print('6.')
 lijst = [1, 2, 3, 4]
 
 antwoord = {1: 1, 2: 4, 3: 9, 4: 16}
+
+'''
+7. Maak een dict van een lijst, de key is het element van de lijst, de value is het kwadraat van de key.
+In het antwoord mogen alleen veelvouden van 4 voorkomen
+'''
+print()
+print('6.')
+
+lijst = [1, 2, 3, 4]
+
+antwoord = {2: 4, 4: 16}
