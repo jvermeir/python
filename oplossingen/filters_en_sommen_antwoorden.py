@@ -61,3 +61,39 @@ print(antwoord)
 print(list(map(lambda x: x * 2, lijst)))
 # of
 print([x * 2 for x in lijst])
+
+'''
+5. Maak een dict van een lijst
+'''
+print()
+print('5.')
+
+lijst = [1, 2, 3, 4]
+
+antwoord = {}
+
+for x in lijst:
+    antwoord[x] = x
+
+print(antwoord)
+
+# korte versie
+print({x: x for x in lijst})
+
+'''
+6. Maak een dict van een lijst, de key is het element van de lijst, de value is het kwadraat van de key
+'''
+print()
+print('6.')
+
+lijst = [1, 2, 3, 4]
+
+antwoord = {}
+
+for x in lijst:
+    antwoord[x] = x*x
+
+print(antwoord)
+
+# korte versie
+print({x: x*x for x in lijst})
