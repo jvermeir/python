@@ -37,7 +37,7 @@ vraag:
     wat is het langste woord?
 resultaat:
 '''
-lengte_langste_woord = 7
+lengte_langste_woord = 11
 langste_woord = 'tomatensoep'
 
 # 3.
