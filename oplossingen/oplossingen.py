@@ -44,7 +44,7 @@ cijfers = [1, 3, 5, 7, 9, 2]
 #
 hoogste_cijfer = None
 for cijfer in cijfers:
-    if hoogste_cijfer == None or hoogste_cijfer<=cijfer:
+    if hoogste_cijfer is None or hoogste_cijfer<=cijfer:
         hoogste_cijfer = cijfer
 
 print ("hoogste cijfer: ", hoogste_cijfer)
@@ -222,7 +222,7 @@ lijst = [10, 2, 3, 4, 6]
 #
 laagste_cijfer = None
 for cijfer in lijst:
-    if laagste_cijfer == None or laagste_cijfer > cijfer:
+    if laagste_cijfer is None or laagste_cijfer > cijfer:
         laagste_cijfer = cijfer
 
 antwoord = []
@@ -246,7 +246,7 @@ antwoord = {}
 
 for woord in lijst:
     aantal = antwoord.get(woord)
-    if aantal == None:
+    if aantal is None:
         aantal = 0
     aantal = aantal + 1
     antwoord[woord] = aantal
@@ -337,3 +337,61 @@ def zijn_alle_cijfers_groter_dan_X(lijst, x):
 
 print(zijn_alle_cijfers_groter_dan_X(lijst_kleine_cijfers, 10))
 print(zijn_alle_cijfers_groter_dan_X(lijst_grote_cijfers, 10))
+
+'''
+17. Print alle combinaties van elementen in lijst a en lijst b
+'''
+print()
+print('17.')
+
+lijst_a = ['a1', 'a2', 'a3']
+lijst_b = ['b1', 'b2', 'b3']
+antwoord = []
+
+for a in lijst_a:
+    for b in lijst_b:
+        antwoord.append(a + b)
+
+print(antwoord)
+
+'''
+18. Print 'even' voor elk even getal en 'oneven' voor elk oneven getal in de lijst.
+Print ook het totale aantal even en oneven getallen.
+'''
+print()
+print('18.')
+
+lijst = [1, 3, 2, 5, 8, 6, 11]
+oneven_getallen = []
+even_getallen = []
+for getal in lijst:
+    if getal % 2 == 0:
+        print('even')
+        even_getallen.append(getal)
+    else:
+        print('oneven')
+        oneven_getallen.append(getal)
+
+print('aantal even getallen: ', len(even_getallen))
+print('aantal oneven getallen: ', len(oneven_getallen))
+
+'''
+19. Maak een lijst met de som van alle paren van twee opeenvolgende getallen in de lijst.
+Wat gebeurt er als de lijst een oneven aantal getallen bevat?
+'''
+print()
+print('19.')
+
+lijst = [1, 3, 2, 5, 8, 6, 11]
+antwoord = []
+i = 0
+while i<len(lijst):
+    if i<len(lijst)-1:
+        nieuw_getal = lijst[i] + lijst[i+1]
+        antwoord.append(nieuw_getal)
+    else:
+        nieuw_getal = lijst[i]
+        antwoord.append(nieuw_getal)
+    i = i + 2
+
+print(antwoord)

@@ -152,3 +152,42 @@ lijst_grote_cijfers = [14, 15]  # True
 '''
 lijst_kleine_cijfers = [1, 3, 5, 7]  # False
 lijst_grote_cijfers = [14, 15]  # True
+
+'''
+17. Print alle combinaties van elementen in lijst a en lijst b
+Je hebt twee for loops in elkaar nodig
+'''
+lijst_a = ['a1', 'a2', 'a3']
+lijst_b = ['b1', 'b2', 'b3']
+antwoord = ['a1b1', 'a1b2', 'a1b3', 'a2b1', 'a2b2', 'a2b3', 'a3b1', 'a3b2', 'a3b3']
+
+'''
+18. Print 'even' voor elk even getal en 'oneven' voor elk oneven getal in de lijst.
+Print ook het totale aantal even en oneven getallen.
+'''
+lijst = [1, 3, 2, 5, 8, 6, 11]
+'''
+output is
+oneven
+oneven
+even
+oneven
+even
+even
+oneven
+aantal even getallen:  3
+aantal oneven getallen:  4
+'''
+
+'''
+19. Maak een lijst met de som van alle paren van twee opeenvolgende getallen in de lijst.
+Je hebt een while nodig ipv een for:
+
+    i = 0
+    while i<len(lijst):
+        # do iets ...
+        
+Wat gebeurt er als de lijst een oneven aantal getallen bevat?
+'''
+lijst = [1, 3, 2, 5, 8, 6, 11]
+antwoord = [4, 7, 14, 11]
