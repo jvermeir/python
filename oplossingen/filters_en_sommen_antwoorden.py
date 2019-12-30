@@ -110,9 +110,9 @@ lijst = [1, 2, 3, 4]
 antwoord = {}
 
 for x in lijst:
-    kwadraad = x*x
-    if kwadraad % 4 == 0:
-        antwoord[x] = kwadraad
+    kwadraat = x*x
+    if kwadraat % 4 == 0:
+        antwoord[x] = kwadraat
 
 print(antwoord)
 
