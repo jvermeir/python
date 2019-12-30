@@ -21,8 +21,7 @@ resultaat:
     mies: 4
     tomatensoep: 11 
     aap: 3
-'''
-'''
+    
 bonusvraag: 
     wat gebeurt er als woorden gelijk is aan de lege lijst?
     wat gebeurt er als woorden de waarde None heeft?

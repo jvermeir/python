@@ -118,3 +118,49 @@ print(antwoord)
 
 # korte versie
 print({x: x*x for x in lijst if x*x % 4 == 0})
+
+'''
+8. Trek het kleinste getal in de lijst af van alle andere getallen
+'''
+print()
+print('8.')
+
+lijst = [10, 2, 3, 4, 6]
+
+#
+# rechtoe-rechtaan versie:
+#
+laagste_cijfer = None
+for cijfer in lijst:
+    if laagste_cijfer == None or laagste_cijfer > cijfer:
+        laagste_cijfer = cijfer
+
+antwoord = []
+for cijfer in lijst:
+        antwoord.append(cijfer - laagste_cijfer)
+
+print (antwoord)
+
+# korte versie
+laagste_cijfer = min(lijst)
+print(list(x - laagste_cijfer for x in lijst))
+
+'''
+9. Tel hoe vaak een woord voorkomt in een lijst
+'''
+print()
+print('9.')
+
+lijst = ['woord1', 'woord1', 'woord2', 'woord1', 'woord3', 'woord3']
+#
+# rechtoe-rechtaan versie:
+#
+antwoord = {}
+for woord in lijst:
+    aantal = antwoord.get(woord)
+    if aantal == None:
+        aantal = 0
+    aantal = aantal + 1
+    antwoord[woord] = aantal
+
+print(antwoord)

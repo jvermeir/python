@@ -65,8 +65,31 @@ antwoord = {1: 1, 2: 4, 3: 9, 4: 16}
 In het antwoord mogen alleen veelvouden van 4 voorkomen
 '''
 print()
-print('6.')
+print('7.')
 
 lijst = [1, 2, 3, 4]
 
 antwoord = {2: 4, 4: 16}
+
+'''
+8. Trek het kleinste getal in de lijst af van alle getallen in de lijst.
+hint: combineer 2 stappen:
+- zoek eerst het kleinste getal
+- trek daarna het kleinste getal af van de andere getallen. 
+'''
+print()
+print('8.')
+
+lijst = [10, 2, 3, 4, 6]
+
+antwoord = [8, 0, 1, 2, 4]
+
+'''
+9. Tel hoe vaak een woord voorkomt in een lijst
+'''
+print()
+print('9.')
+
+lijst = ['woord1', 'woord1', 'woord2', 'woord1', 'woord3', 'woord3']
+
+antwoord = {{'woord1': 3}, {'woord2': 1}, {'woord3':2}}
