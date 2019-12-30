@@ -152,10 +152,8 @@ print()
 print('9.')
 
 lijst = ['woord1', 'woord1', 'woord2', 'woord1', 'woord3', 'woord3']
-#
-# rechtoe-rechtaan versie:
-#
 antwoord = {}
+
 for woord in lijst:
     aantal = antwoord.get(woord)
     if aantal == None:
@@ -164,3 +162,88 @@ for woord in lijst:
     antwoord[woord] = aantal
 
 print(antwoord)
+
+'''
+10. Controleer of een lijst gesorteerd is. 
+'''
+print()
+print('10.')
+
+lijst_gesorteerd = [1, 3, 5, 7] # True
+gesorteerd = True
+vorig_cijfer = None
+for cijfer in lijst_gesorteerd:
+    if vorig_cijfer is None:
+        vorig_cijfer = cijfer
+    elif cijfer < vorig_cijfer:
+        gesorteerd = False
+
+print(gesorteerd)
+
+lijst_niet_gesorteerd = [3, 5, 1, 7] # False
+gesorteerd = True
+vorig_cijfer = None
+for cijfer in lijst_niet_gesorteerd:
+    if vorig_cijfer is None:
+        vorig_cijfer = cijfer
+    elif cijfer < vorig_cijfer:
+        gesorteerd = False
+
+print(gesorteerd)
+
+# Korte(re) versie
+def is_deze_lijst_gesorteerd(lijst):
+    vorig_cijfer = None
+    for cijfer in lijst:
+        if vorig_cijfer is None:
+            vorig_cijfer = cijfer
+        elif cijfer < vorig_cijfer:
+            return False
+    return True
+
+
+print(is_deze_lijst_gesorteerd(lijst_gesorteerd))
+print(is_deze_lijst_gesorteerd(lijst_niet_gesorteerd))
+
+'''
+11. Controleer of alle cijfers in een lijst groter zijn dan 10 
+'''
+print()
+print('11.')
+
+lijst_kleine_cijfers = [1, 3, 5, 7]  # False
+lijst_grote_cijfers = [14, 15]  # True
+
+def zijn_alle_cijfers_groter_dan_10(lijst):
+    for cijfer in lijst:
+        if cijfer <= 10:
+            return False
+    return True
+
+
+print(zijn_alle_cijfers_groter_dan_10(lijst_kleine_cijfers))
+print(zijn_alle_cijfers_groter_dan_10(lijst_grote_cijfers))
+
+# korte versie
+import functools
+print(functools.reduce(lambda x, y: x & (y > 10), lijst_kleine_cijfers, True))
+print(functools.reduce(lambda x, y: x & (y > 10), lijst_grote_cijfers, True))
+
+'''
+12. Pas de oplossing in 11 aan zodat je ipv 10 een andere grens kunt kiezen
+'''
+print()
+print('12.')
+
+lijst_kleine_cijfers = [1, 3, 5, 7]  # False
+lijst_grote_cijfers = [14, 15]  # True
+
+def zijn_alle_cijfers_groter_dan_X(lijst, x):
+    for cijfer in lijst:
+        if cijfer <= x:
+            return False
+    return True
+
+
+print(zijn_alle_cijfers_groter_dan_X(lijst_kleine_cijfers, 10))
+print(zijn_alle_cijfers_groter_dan_X(lijst_grote_cijfers, 10))

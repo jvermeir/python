@@ -93,3 +93,14 @@ print('9.')
 lijst = ['woord1', 'woord1', 'woord2', 'woord1', 'woord3', 'woord3']
 
 antwoord = {{'woord1': 3}, {'woord2': 1}, {'woord3':2}}
+
+'''
+10. Controleer of een lijst gesorteerd is. 
+'''
+print()
+print('10.')
+
+lijst_gesorteerd = [1, 3, 5, 7] # True
+lijst_niet_gesorteerd = [3, 5, 1, 7] # False
+
+
