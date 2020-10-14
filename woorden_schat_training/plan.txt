@@ -1,0 +1,35 @@
+Dit is het doel:
+
+    een programmatje waarmee je duitse woorden kunt oefenen.
+
+Het programma leest een bestand in met duits/nederlandse woordparen en laat dan een willekeurig woord uit de lijst zien.
+Daarna kun je de vertaling invoeren en het programma controleert of het klopt.
+extra: Je kunt uitgaan van duits of van nederlands.
+
+Stappen voor de oplossing:
+
+1 Lees het tekst bestand in het geheugen.
+2 Kies een woord uit de lijst en print dat op het scherm.
+3 Laat de vertaling invoeren.
+4 Controleer of het klopt.
+5 zo nee, ga naar stap 3.
+6 zo ja, ga naar stap 2.
+
+Het tekst bestand zou er zo uit kunnen zien:
+
+ich;ik
+will;wil
+Deutsch;Duits
+lernen;leren
+
+je kunt de woordparen opslaan in een data structuur die dict heet. een key (het duitse woord) verwijst dan naar een value (het nederlandse woord).
+het is handig on daarmee te beginnen, dus zoek uit hoe je een dict maakt (zonder het bestand, gebruik de vier woordparen hierboven als inhoud) en kijk of je alle regels kunt printen.
+print dan alleen de waarde die hoort bij de key 'Deutsch'. en print het aantal regels in de dict. print ook het eerste en het laatste paar in de dict.
+
+daarna kun je uitzoeken hoe je een tekst regel in kunt voeren via het toetsenbord. dat is de value die hoort bij de een key in de dict.
+het programma moet net zolang om een nieuwe tekst vragen tot de tekst overeenkomt met de value.
+
+de volgende stap is een willekeurig woord uit de dict selecteren. daarvoor moet je een willekeurig getal laten genereren. daar is een functie voor die
+een getal tussen 0 en 1 maakt, dus je moet daarvan nog een getal tussen 0 en het aantal woordparen in de dict van maken.
+
+de laatste stap is het inlezen van een bestand in de dict.
